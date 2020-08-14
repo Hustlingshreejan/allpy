@@ -9,7 +9,7 @@ the computer will generate the number which is in-between those two values. blab
 def comp_gen(first_player,second_player):
     # guess made my computer
     comp_gen = randint(first_player, second_player)
-    print(comp_gen)
+    
     return comp_gen
 
 def game(comp_gen):
@@ -48,16 +48,17 @@ if __name__ == '__main__':
     print(f'\nPlayer one has set the number {first_player} whereas player two has set {second_player}.'
           f' Now guess any number from {first_player} to {second_player}.\n')
 
-    g = comp_gen(first_player, second_player)
+    g1 = comp_gen(first_player, second_player)
 
-    player1 = game(g)
+    player1 = game(g1)
     # using for loop to print * so that the result will go up and player two won't be able to see the value
     for i in range(20):
         print('*')
     print(f"Player one took {player1} chance(s) to guess the number.")
     print("Player two turn to guess the number.")
-
-    player2 = game(g)
+    g2 = comp_gen(first_player, second_player)
+    player2 = game(g2)
+    print(f'Computer generated {g1} for player1 and {g2} for player2')
     if player1 > player2:
         print("\nPlayer2 won.")
     elif player1 == player2:
