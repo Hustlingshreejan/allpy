@@ -1,0 +1,17 @@
+import turtle
+bob = turtle.Turtle()
+bob.rt(90)
+bob.fd(200)
+bob.bk(50)
+bob.lt(90)
+bob.fd(90)
+bob.lt(140)
+bob.fd(115)
+bob.rt(115)
+bob.fd(90)
+bob.lt(130)
+bob.fd(92)
+bob.lt(116)
+bob.fd(50)
+bob.lt(90) #surya
+turtle.mainloop()
